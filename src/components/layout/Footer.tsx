@@ -22,19 +22,19 @@ const Footer = () => {
                         </p>
                         <div className="flex gap-10">
                             <a
-                                href="#"
+                                href="https://www.instagram.com/desynor.in"
                                 className="text-[10px] font-bold tracking-[0.3em] uppercase hover:text-sage transition-colors border-b border-cream/20 pb-1"
                             >
                                 Instagram
                             </a>
                             <a
-                                href="#"
+                                href="https://www.desynor.in"
                                 className="text-[10px] font-bold tracking-[0.3em] uppercase hover:text-sage transition-colors border-b border-cream/20 pb-1"
                             >
                                 Facebook
                             </a>
                             <a
-                                href="#"
+                                href="https://www.desynor.in"
                                 className="text-[10px] font-bold tracking-[0.3em] uppercase hover:text-sage transition-colors border-b border-cream/20 pb-1"
                             >
                                 Archive
@@ -54,7 +54,7 @@ const Footer = () => {
                             Maharashtra 411004
                         </p>
                         <p className="text-sm font-medium mt-6 text-cream tracking-widest italic">
-                            020 2553 1244
+                            +91 020 2553 1244
                         </p>
                     </div>
 
@@ -76,21 +76,21 @@ const Footer = () => {
 
                 <div className="pt-16 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="flex flex-col">
-                        <span className="text-2xl font-serif text-cream tracking-tight">
+                        <span className="text-3xl font-serif text-cream tracking-tight">
                             Vaishali
                         </span>
-                        <span className="text-[8px] tracking-[0.4em] font-semibold text-sage uppercase">
+                        <span className="text-[10px] tracking-[0.4em] font-semibold text-sage uppercase">
                             © 2026 Legacy Collection • Est. 1951 • Redesigned by Desynor
                         </span>
                     </div>
                     <div className="flex gap-12 text-[9px] font-bold tracking-[0.2em] uppercase text-cream/40">
-                        <Link href="#" className="hover:text-cream transition-colors">
+                        <Link href="https://www.desynor.in" className="hover:text-cream transition-colors">
                             Privacy
                         </Link>
-                        <Link href="#" className="hover:text-cream transition-colors">
+                        <Link href="https://www.desynor.in" className="hover:text-cream transition-colors">
                             Accessibility
                         </Link>
-                        <Link href="#" className="hover:text-cream transition-colors">
+                        <Link href="https://www.desynor.in" className="hover:text-cream transition-colors">
                             Terms
                         </Link>
                     </div>

@@ -66,7 +66,7 @@ const menuItems: MenuSection[] = [
                 name: "Special Bhelpuri",
                 price: "95",
                 description: "A perfectly balanced mix of puffed rice, vegetables, and our signature tangy tamarind chutney.",
-                image: "https://images.unsplash.com/photo-1626132644521-a6ce1338171f?q=80&w=800&auto=format&fit=crop",
+                image: "https://media.istockphoto.com/id/1437266802/photo/bhel-puri-indian-street-food.jpg?s=612x612&w=0&k=20&c=gZ8771FwzP0uzJjvln81k4aoAwQ8CPUyo5gLLHefL2o=",
             },
         ],
     },
