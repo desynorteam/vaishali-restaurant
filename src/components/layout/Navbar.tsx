@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
 
     const navLinks = [
@@ -31,8 +33,8 @@ const Navbar = () => {
                             key={link.name}
                             href={link.href}
                             className={`text-[10px] font-bold tracking-[0.2em] uppercase transition-all relative py-2 ${pathname === link.href
-                                    ? "text-forest after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-sage"
-                                    : "text-forest/40 hover:text-forest"
+                                ? "text-forest after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-sage"
+                                : "text-forest/40 hover:text-forest"
                                 }`}
                         >
                             {link.name}
@@ -41,15 +43,50 @@ const Navbar = () => {
                 </nav>
 
                 <div className="flex items-center space-x-4">
-                    <Link href="/contact">
+                    <Link href="/contact" className="hidden sm:block">
                         <button className="bg-forest text-ivory px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-[10px] font-bold tracking-[0.2em] hover:bg-primary-green transition-all uppercase shadow-lg shadow-forest/10 active:scale-95 whitespace-nowrap">
                             Reservations
                         </button>
                     </Link>
-                    {/* Mobile Menu Button - Optional visual polish */}
-                    <button className="md:hidden text-forest p-2">
-                        <span className="material-symbols-outlined">menu</span>
+
+                    <button
+                        className="md:hidden text-forest p-2 focus:outline-none"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    >
+                        <span className="material-symbols-outlined text-2xl">
+                            {isMenuOpen ? "close" : "menu"}
+                        </span>
                     </button>
+                </div>
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            <div className={`fixed inset-0 z-40 bg-ivory transition-transform duration-500 md:hidden ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
+                <div className="flex flex-col h-full pt-32 px-10 pb-12">
+                    <nav className="flex flex-col space-y-8">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`text-4xl font-serif italic tracking-tight transition-all ${pathname === link.href ? "text-forest" : "text-forest/30"}`}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </nav>
+
+                    <div className="mt-auto">
+                        <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                            <button className="w-full bg-forest text-ivory py-5 rounded-2xl text-xs font-bold tracking-[0.3em] uppercase">
+                                Book a Table
+                            </button>
+                        </Link>
+                        <div className="mt-8 flex justify-between items-center text-[10px] tracking-widest text-forest/40 font-bold uppercase">
+                            <span>Since 1951</span>
+                            <span>Pune, India</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

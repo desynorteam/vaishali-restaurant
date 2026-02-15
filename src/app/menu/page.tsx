@@ -136,12 +136,12 @@ const MenuPage = () => {
                 </section>
 
                 {/* Categorized Sticky Nav */}
-                <div className="sticky top-[80px] z-40 bg-ivory/95 backdrop-blur-md py-6 flex flex-col md:flex-row md:items-center justify-between gap-8 border-b border-sage/20 mb-24">
-                    <div className="flex items-center space-x-10 overflow-x-auto no-scrollbar scrollbar-hide">
+                <div className="sticky top-[80px] z-40 bg-ivory/95 backdrop-blur-md py-4 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8 border-b border-sage/20 mb-16 md:mb-24 px-4 -mx-4 md:px-0 md:mx-0">
+                    <div className="flex items-center space-x-8 md:space-x-10 overflow-x-auto no-scrollbar py-2">
                         {menuCategories.map((category) => (
                             <button
                                 key={category}
-                                className="text-[10px] font-bold tracking-[0.2em] text-forest/40 hover:text-forest transition-colors uppercase whitespace-nowrap"
+                                className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-forest/40 hover:text-forest transition-colors uppercase whitespace-nowrap px-2"
                             >
                                 {category}
                             </button>
