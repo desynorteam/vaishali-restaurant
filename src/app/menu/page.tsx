@@ -1,4 +1,5 @@
 import PageLayout from "@/components/layout/PageLayout";
+import Image from "next/image";
 
 const menuCategories = [
     "Classics",
@@ -191,10 +192,12 @@ const MenuPage = () => {
                                                             </span>
                                                         </div>
                                                     )}
-                                                    <img
+                                                    <Image
                                                         src={item.image}
                                                         alt={item.name}
-                                                        className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                                                        fill
+                                                        className="object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                     />
                                                 </div>
                                             </div>

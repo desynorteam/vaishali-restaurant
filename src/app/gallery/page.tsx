@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import PageLayout from "@/components/layout/PageLayout";
 
 const categories = ["All Stories", "Ambiance", "Heritage", "Cuisine"];
@@ -29,7 +30,7 @@ const galleryItems = [
     {
         category: "Cuisine",
         title: "The Art of Filter Coffee",
-        image: "https://images.unsplash.com/photo-1594910413528-9430d4a70420?q=80&w=800&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop",
         aspect: "aspect-square",
         mt: "md:-mt-8",
     },
@@ -95,11 +96,13 @@ const GalleryPage = () => {
                                 }`}
                         >
                             <div className={`${item.aspect} bg-gray-100 relative overflow-hidden`}>
-                                <img
+                                <Image
                                     src={item.image}
                                     alt={item.title}
-                                    className={`w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 ${item.grayscale ? "grayscale group-hover:grayscale-0" : ""
+                                    fill
+                                    className={`object-cover transition-all duration-1000 group-hover:scale-105 ${item.grayscale ? "grayscale group-hover:grayscale-0" : ""
                                         }`}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
                                     <span className="text-ivory text-[10px] uppercase tracking-[0.2em] font-medium">

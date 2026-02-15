@@ -1,4 +1,5 @@
 import PageLayout from "@/components/layout/PageLayout";
+import Image from "next/image";
 
 const HistoryPage = () => {
     return (
@@ -26,10 +27,12 @@ const HistoryPage = () => {
                 {/* Dynamic Hero Section */}
                 <section className="relative h-screen flex items-center justify-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
-                        <img
+                        <Image
                             src="https://images.unsplash.com/photo-1590053141666-998f4dc799a4?q=80&w=1200&auto=format&fit=crop"
                             alt="Heritage facade texture"
-                            className="w-full h-full object-cover opacity-20"
+                            fill
+                            className="object-cover opacity-20"
+                            priority
                         />
                         <div className="absolute inset-0 bg-gradient-to-b from-cream/20 via-cream/80 to-cream"></div>
                         <div className="absolute top-40 right-[10%] opacity-20 rotate-12">
@@ -102,11 +105,13 @@ const HistoryPage = () => {
                                         age 13, learning the ropes of hospitality.
                                     </p>
                                 </div>
-                                <div className="bg-white p-4 rounded-3xl shadow-xl shadow-sage/10 transform hover:scale-[1.02] transition-transform">
-                                    <img
+                                <div className="bg-white p-4 rounded-3xl shadow-xl shadow-sage/10 transform hover:scale-[1.02] transition-transform relative h-80 overflow-hidden">
+                                    <Image
                                         alt="Heritage Architecture Facade"
-                                        className="w-full h-80 object-cover rounded-2xl grayscale contrast-125 transition-all duration-700 hover:grayscale-0"
+                                        fill
+                                        className="object-cover rounded-2xl grayscale contrast-125 transition-all duration-700 hover:grayscale-0"
                                         src="https://images.unsplash.com/photo-1582234053648-735990262193?q=80&w=800&auto=format&fit=crop"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                 </div>
                             </div>
@@ -149,11 +154,13 @@ const HistoryPage = () => {
                                         craft that defined his future.
                                     </p>
                                 </div>
-                                <div className="bg-white p-4 rounded-3xl shadow-xl shadow-peach/20 -rotate-2 hover:rotate-0 transition-transform">
-                                    <img
+                                <div className="bg-white p-4 rounded-3xl shadow-xl shadow-peach/20 -rotate-2 hover:rotate-0 transition-transform relative h-80 overflow-hidden">
+                                    <Image
                                         alt="Mid-century Heritage Interior"
-                                        className="w-full h-80 object-cover rounded-2xl"
+                                        fill
+                                        className="object-cover rounded-2xl"
                                         src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                 </div>
                             </div>
@@ -191,11 +198,13 @@ const HistoryPage = () => {
                                         for students and families alike.
                                     </p>
                                 </div>
-                                <div className="bg-white p-4 rounded-3xl shadow-xl shadow-sage/20 rotate-1 hover:rotate-0 transition-transform">
-                                    <img
+                                <div className="bg-white p-4 rounded-3xl shadow-xl shadow-sage/20 rotate-1 hover:rotate-0 transition-transform relative h-80 overflow-hidden">
+                                    <Image
                                         alt="Heritage Dining Setup"
-                                        className="w-full h-80 object-cover rounded-2xl"
+                                        fill
+                                        className="object-cover rounded-2xl"
                                         src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?q=80&w=800&auto=format&fit=crop"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                 </div>
                             </div>
@@ -267,30 +276,42 @@ const HistoryPage = () => {
                             <div className="grid grid-cols-2 gap-6 relative">
                                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-peach rounded-full opacity-20 blur-3xl"></div>
                                 <div className="space-y-6 pt-16">
-                                    <div className="relative group">
-                                        <img
+                                    <div className="relative group h-72 rounded-3xl overflow-hidden">
+                                        <Image
                                             alt="Fine Heritage Detail"
-                                            className="rounded-3xl w-full h-72 object-cover shadow-2xl transition-all duration-500 group-hover:-translate-y-2"
+                                            fill
+                                            className="object-cover shadow-2xl transition-all duration-500 group-hover:-translate-y-2"
                                             src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop"
+                                            sizes="25vw"
                                         />
                                     </div>
-                                    <img
-                                        alt="Colonial Building"
-                                        className="rounded-3xl w-full h-80 object-cover shadow-lg"
-                                        src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=800&auto=format&fit=crop"
-                                    />
+                                    <div className="relative h-80 rounded-3xl overflow-hidden">
+                                        <Image
+                                            alt="Colonial Building"
+                                            fill
+                                            className="object-cover shadow-lg"
+                                            src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=800&auto=format&fit=crop"
+                                            sizes="25vw"
+                                        />
+                                    </div>
                                 </div>
                                 <div className="space-y-6">
-                                    <img
-                                        alt="Grand Heritage Garden"
-                                        className="rounded-3xl w-full h-96 object-cover shadow-2xl"
-                                        src="https://images.unsplash.com/photo-1558449101-de8a63503f57?q=80&w=800&auto=format&fit=crop"
-                                    />
-                                    <div className="relative group">
-                                        <img
+                                    <div className="relative h-96 rounded-3xl overflow-hidden">
+                                        <Image
+                                            alt="Grand Heritage Garden"
+                                            fill
+                                            className="object-cover shadow-2xl"
+                                            src="https://images.unsplash.com/photo-1558449101-de8a63503f57?q=80&w=800&auto=format&fit=crop"
+                                            sizes="25vw"
+                                        />
+                                    </div>
+                                    <div className="relative group h-56 rounded-3xl overflow-hidden">
+                                        <Image
                                             alt="Brass and Silverware"
-                                            className="rounded-3xl w-full h-56 object-cover shadow-lg group-hover:scale-105 transition-transform"
+                                            fill
+                                            className="object-cover shadow-lg group-hover:scale-105 transition-transform"
                                             src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop"
+                                            sizes="25vw"
                                         />
                                         <div className="absolute bottom-4 left-4">
                                             <span className="bg-cream/90 text-primary-green text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
@@ -313,11 +334,13 @@ const HistoryPage = () => {
                         <h2 className="font-serif text-5xl md:text-6xl mb-12 italic text-stone-800">
                             Carrying the Torch
                         </h2>
-                        <div className="relative group cursor-pointer overflow-hidden rounded-[40px] mb-16 shadow-2xl">
-                            <img
+                        <div className="relative group cursor-pointer h-[600px] overflow-hidden rounded-[40px] mb-16 shadow-2xl">
+                            <Image
                                 alt="Grand Colonial Dining Hall"
-                                className="w-full h-[600px] object-cover transition-transform duration-1000 group-hover:scale-110"
+                                fill
+                                className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                 src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
+                                sizes="100vw"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-primary-green/90 via-primary-green/20 to-transparent flex flex-col justify-end p-16 text-left">
                                 <span className="material-symbols-outlined text-cream/40 text-6xl mb-4">

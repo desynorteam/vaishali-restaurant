@@ -31,11 +31,13 @@ export default function Home() {
       <section className="px-6 sm:px-12 lg:px-24 py-16 flex flex-col items-center">
         <div className="max-w-5xl w-full">
           <div className="bg-white border border-sage/20 shadow-xl shadow-forest/5 p-8 md:p-16 rounded-sm flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-            <div className="w-full md:w-1/2 overflow-hidden aspect-square rounded-sm">
-              <img
+            <div className="w-full md:w-1/2 overflow-hidden aspect-square rounded-sm relative">
+              <Image
                 src="https://images.unsplash.com/photo-1590001158193-790dc249aa3d?q=80&w=1200&auto=format&fit=crop"
                 alt="Heritage Courtyard"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                fill
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="w-full md:w-1/2 space-y-8">
@@ -69,11 +71,13 @@ export default function Home() {
       <section className="px-6 sm:px-12 lg:px-24 py-16">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-24 items-center">
-            <div className="w-full md:w-7/12 aspect-[16/10] overflow-hidden">
-              <img
+            <div className="w-full md:w-7/12 aspect-[16/10] overflow-hidden relative">
+              <Image
                 src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?q=80&w=1200&auto=format&fit=crop"
                 alt="Mysore Special Masala Dosa"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 58vw"
               />
             </div>
             <div className="w-full md:w-5/12 py-8 border-l border-sage/20 pl-8 lg:pl-16">
@@ -92,11 +96,13 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col md:flex-row-reverse gap-12 lg:gap-24 items-center">
-            <div className="w-full md:w-7/12 aspect-[16/10] overflow-hidden">
-              <img
+            <div className="w-full md:w-7/12 aspect-[16/10] overflow-hidden relative">
+              <Image
                 src="https://images.unsplash.com/photo-1594910413528-9430d4a70420?q=80&w=1200&auto=format&fit=crop"
                 alt="Vaishali Filter Coffee"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 58vw"
               />
             </div>
             <div className="w-full md:w-5/12 py-8 border-r border-sage/20 pr-8 lg:pr-16 text-right">
